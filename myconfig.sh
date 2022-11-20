@@ -74,20 +74,20 @@ _libraries="../libraries"
 _cxxflags=(
   -target i386-unknown-linux-gnu
   -DDISABLE_COMMAND_LINE=1
-  # -D_LIBCPP_HAS_NO_VENDOR_AVAILABILITY_ANNOTATIONS
-  # -nostdinc
-  # -nostdinc++
-  #
-  # -isystem "${_libraries}/std/include/libcxx/include"
-  # -isystem "${_libraries}/std/include/libcxxabi/include"
-  # -isystem "${_libraries}/std/include/libunwind/include"
-  # -isystem "${_libraries}/std/include/include"
-  # -isystem "${_libraries}/std/include/libc/include/i386-linux-gnu"
-  # -isystem "${_libraries}/std/include/libc/include/generic-glibc"
-  # -isystem "${_libraries}/std/include/libc/include/x86-linux-any"
-  # -isystem "${_libraries}/std/include/libc/include/any-linux-any"
-  #
-  # -I "${_libraries}/sdl2/include"
+  -D_LIBCPP_HAS_NO_VENDOR_AVAILABILITY_ANNOTATIONS
+  -nostdinc
+  -nostdinc++
+
+  -isystem "${_libraries}/std/include/libcxx/include"
+  -isystem "${_libraries}/std/include/libcxxabi/include"
+  -isystem "${_libraries}/std/include/libunwind/include"
+  -isystem "${_libraries}/std/include/include"
+  -isystem "${_libraries}/std/include/libc/include/i386-linux-gnu"
+  -isystem "${_libraries}/std/include/libc/include/generic-glibc"
+  -isystem "${_libraries}/std/include/libc/include/x86-linux-any"
+  -isystem "${_libraries}/std/include/libc/include/any-linux-any"
+
+  -I "${_libraries}/sdl2/include"
 )
 
 _ldflags=(
