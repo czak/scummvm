@@ -73,7 +73,6 @@ _libraries="../libraries"
 
 _cxxflags=(
   -target i386-unknown-linux-gnu
-  -D__GLIBC_MINOR__=19
   -DDISABLE_COMMAND_LINE=1
   # -D_LIBCPP_HAS_NO_VENDOR_AVAILABILITY_ANNOTATIONS
   # -nostdinc
