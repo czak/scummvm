@@ -398,8 +398,11 @@ bool SdlWindow::createOrUpdateWindow(int width, int height, uint32 flags) {
 
 	if (!_window || oldNonUpdateableFlags != newNonUpdateableFlags) {
 		destroyWindow();
-		_window = SDL_CreateWindow(_windowCaption.c_str(), _lastX,
-								   _lastY, width, height, flags);
+		_window = SDL_CreateWindow(_windowCaption.c_str(),
+				SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
+				1920, 1080,
+				SDL_WINDOW_FULLSCREEN | SDL_WINDOW_ALLOW_HIGHDPI);
+
 		if (_window) {
 			setupIcon();
 		}

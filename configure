@@ -3856,6 +3856,11 @@ fi
 # 	fi
 # fi
 
+append_var SDL_CFLAGS "-I ../libraries/sdl2/include -D_REENTRANT"
+append_var SDL_LIBS "-L ../libraries/sdl2/lib/i386 -lSDL2"
+_sdlversion="2.0.2"
+_sdl=yes
+
 _sdlMajorVersionNumber=0
 if test "$_sdl" = yes ; then
 	append_var DEFINES "-DSDL_BACKEND"
