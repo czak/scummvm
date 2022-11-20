@@ -1,0 +1,34 @@
+mold \
+  -dynamic-linker /lib/ld-linux.so.2 \
+  ../libraries/std/lib/i386/Scrt1.o \
+  ../libraries/std/lib/i386/crti.o \
+  ../libraries/std/lib/i386/libc++abi.a \
+  ../libraries/std/lib/i386/libc++.a \
+  ../libraries/std/lib/i386/libunwind.a \
+  ../libraries/std/lib/i386/libm.so.6 \
+  ../libraries/std/lib/i386/libpthread.so.0 \
+  ../libraries/std/lib/i386/libc.so.6 \
+  ../libraries/std/lib/i386/libdl.so.2 \
+  ../libraries/std/lib/i386/librt.so.1 \
+  ../libraries/std/lib/i386/libld.so.2 \
+  ../libraries/std/lib/i386/libutil.so.1 \
+  ../libraries/std/lib/i386/libc_nonshared.a \
+  ../libraries/std/lib/i386/crtn.o \
+  ../libraries/sdl2/lib/i386/libSDL2.so \
+  engines/sky/detection.o \
+  backends/platform/sdl/sdl.o \
+  backends/platform/sdl/sdl-window.o \
+  backends/platform/sdl/posix/posix-main.o \
+  backends/platform/sdl/posix/posix.o \
+  base/libbase.a \
+  engines/sky/libsky.a \
+  engines/libengines.a \
+  gui/libgui.a \
+  backends/libbackends.a \
+  video/libvideo.a \
+  image/libimage.a \
+  graphics/libgraphics.a \
+  audio/libaudio.a \
+  math/libmath.a \
+  common/libcommon.a \
+  -o scummvm

@@ -3833,28 +3833,28 @@ fi
 #
 # Setup SDL specifics for SDL based backends
 #
-if test "$_sdl" = auto ; then
-	find_sdlconfig
-	append_var SDL_CFLAGS "`$_sdlconfig --cflags | sed 's/[[:space:]]*-Dmain=SDL_main//g'`"
-	if test "$_static_build" = yes ; then
-		append_var SDL_LIBS "`$_sdlconfig --static-libs`"
-	else
-		append_var SDL_LIBS "`$_sdlconfig --libs`"
-	fi
-	_sdlversion=`$_sdlconfig --version`
-
-	echocheck "SDL"
-	_sdl=no
-	cat > $TMPC << EOF
-#include "SDL.h"
-int main(int argc, char *argv[]) { SDL_Init(0); return 0; }
-EOF
-	cc_check $LIBS $SDL_LIBS $INCLUDES $SDL_CFLAGS && _sdl=yes
-	echo "$_sdl"
-	if test "$_sdl" = no ; then
-		exit 1
-	fi
-fi
+# if test "$_sdl" = auto ; then
+# 	find_sdlconfig
+# 	append_var SDL_CFLAGS "`$_sdlconfig --cflags | sed 's/[[:space:]]*-Dmain=SDL_main//g'`"
+# 	if test "$_static_build" = yes ; then
+# 		append_var SDL_LIBS "`$_sdlconfig --static-libs`"
+# 	else
+# 		append_var SDL_LIBS "`$_sdlconfig --libs`"
+# 	fi
+# 	_sdlversion=`$_sdlconfig --version`
+#
+# 	echocheck "SDL"
+# 	_sdl=no
+# 	cat > $TMPC << EOF
+# #include "SDL.h"
+# int main(int argc, char *argv[]) { SDL_Init(0); return 0; }
+# EOF
+# 	cc_check $LIBS $SDL_LIBS $INCLUDES $SDL_CFLAGS && _sdl=yes
+# 	echo "$_sdl"
+# 	if test "$_sdl" = no ; then
+# 		exit 1
+# 	fi
+# fi
 
 _sdlMajorVersionNumber=0
 if test "$_sdl" = yes ; then
