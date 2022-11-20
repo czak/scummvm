@@ -2,9 +2,6 @@ mold \
   -dynamic-linker /lib/ld-linux.so.2 \
   ../libraries/std/lib/i386/Scrt1.o \
   ../libraries/std/lib/i386/crti.o \
-  ../libraries/std/lib/i386/libc++abi.a \
-  ../libraries/std/lib/i386/libc++.a \
-  ../libraries/std/lib/i386/libunwind.a \
   ../libraries/std/lib/i386/libm.so.6 \
   ../libraries/std/lib/i386/libpthread.so.0 \
   ../libraries/std/lib/i386/libc.so.6 \
@@ -15,6 +12,7 @@ mold \
   ../libraries/std/lib/i386/libc_nonshared.a \
   ../libraries/std/lib/i386/crtn.o \
   ../libraries/sdl2/lib/i386/libSDL2.so \
+  ../libraries/libstdc++/lib/i386/libstdc++.so.6 \
   engines/sky/detection.o \
   backends/platform/sdl/sdl.o \
   backends/platform/sdl/sdl-window.o \
